@@ -1,0 +1,21 @@
+<%= stylesheet_link_tag("user.css") %>
+<div class="container">
+<p style="color: green"><%= notice %></p>
+
+<div class="post-title">
+<%= image_tag("profile/avater.png", class: "profile_img") %>
+<h1>Posts</h1>
+</div>
+
+<div id="posts">
+
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Show this post", post %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New post", new_post_path %>
+</div>
